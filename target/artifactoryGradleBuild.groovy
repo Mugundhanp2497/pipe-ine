@@ -21,7 +21,7 @@ node {
 
 
     stage('Artifactory configuration') {
-              git url: 'https://github.com/jfrogdev/project-examples.git'
+              hi
 
         // Tool name from Jenkins configuration
 
@@ -38,7 +38,7 @@ node {
 
 
     stage('Gradle build') {
-              git url: 'https://github.com/jfrogdev/project-examples.git'
+              hello
 
         //buildInfo = rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
 
@@ -47,7 +47,7 @@ node {
 
 
     stage('Publish build info') {
-              git url: 'https://github.com/jfrogdev/project-examples.git'
+              hey
 
        // server.publishBuildInfo buildInfo
 
