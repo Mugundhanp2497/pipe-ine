@@ -7,7 +7,7 @@ node {
 
     stage('Gradle build') {
 
-        buildInfo = "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+        buildInfo =a: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
 
     }
 
