@@ -14,37 +14,40 @@ node {
 
     stage('Clone sources') {
 
-      // git url: 'https://github.com/jfrogdev/project-examples.git'
+      git url: 'https://github.com/jfrogdev/project-examples.git'
 
     }
 
 
 
     stage('Artifactory configuration') {
+              git url: 'https://github.com/jfrogdev/project-examples.git'
 
         // Tool name from Jenkins configuration
 
-        rtGradle.tool = "Gradle-2.4"
+     //   rtGradle.tool = "Gradle-2.4"
 
         // Set Artifactory repositories for dependencies resolution and artifacts deployment.
 
-        rtGradle.deployer repo:'ext-release-local', server: server
+       // rtGradle.deployer repo:'ext-release-local', server: server
 
-        rtGradle.resolver repo:'remote-repos', server: server
+        //rtGradle.resolver repo:'remote-repos', server: server
 
     }
 
 
 
     stage('Gradle build') {
+              git url: 'https://github.com/jfrogdev/project-examples.git'
 
-      //  buildInfo = rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+        //buildInfo = rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
 
     }
 
 
 
     stage('Publish build info') {
+              git url: 'https://github.com/jfrogdev/project-examples.git'
 
        // server.publishBuildInfo buildInfo
 
