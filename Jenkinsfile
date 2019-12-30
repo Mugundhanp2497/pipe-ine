@@ -1,14 +1,4 @@
 node {
-// Get Artifactory server instance, defined in the Artifactory Plugin administration page.
-
-    def server = Artifactory.server "SERVER_ID"
-
-    // Create an Artifactory Gradle instance.
-
-    def rtGradle = Artifactory.newGradleBuild()
-
-    def buildInfo
-
     stage('Clone sources') {
 
         git url: 'https://github.com/Mugundhanp2497/pipe-ine.git'
@@ -20,8 +10,6 @@ node {
         buildInfo = rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
 
     }
-
-
 
     stage('Publish build info') {
 
