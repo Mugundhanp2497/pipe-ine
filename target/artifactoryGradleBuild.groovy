@@ -14,7 +14,7 @@ node {
 
     stage('Clone sources') {
 
-        git url: 'https://github.com/jfrogdev/project-examples.git'
+      // git url: 'https://github.com/jfrogdev/project-examples.git'
 
     }
 
@@ -38,7 +38,7 @@ node {
 
     stage('Gradle build') {
 
-        buildInfo = rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
+      //  buildInfo = rtGradle.run rootDir: "gradle-examples/4/gradle-example-ci-server/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish'
 
     }
 
@@ -46,7 +46,7 @@ node {
 
     stage('Publish build info') {
 
-        server.publishBuildInfo buildInfo
+       // server.publishBuildInfo buildInfo
 
     }
 }
