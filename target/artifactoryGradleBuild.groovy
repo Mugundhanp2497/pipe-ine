@@ -49,3 +49,4 @@ node {
         server.publishBuildInfo buildInfo
 
     }
+}
