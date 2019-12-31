@@ -8,7 +8,7 @@ node {
 
     stage('Publish build info') {
 
-        server.publishBuildInfo buildInfo
+    echo "queen" 
 
     }
 
