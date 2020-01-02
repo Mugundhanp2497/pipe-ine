@@ -12,7 +12,7 @@ node {
     echo "queen" 
     }
     stage("Parallel") {
-  steps {
+  
     parallel (
       "Taskone" : {
         echo "do some stuff"
@@ -21,7 +21,7 @@ node {
          echo "Do some other stuff in parallel"
       }
     )
-  }
+  
 }
 }
     
