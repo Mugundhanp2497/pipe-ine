@@ -15,10 +15,10 @@ node {
   steps {
     parallel (
       "Taskone" : {
-        do some stuff
+        echo "do some stuff"
       },
       "Tasktwo" : {
-         Do some other stuff in parallel
+         echo "Do some other stuff in parallel"
       }
     )
   }
