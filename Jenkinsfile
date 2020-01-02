@@ -1,5 +1,4 @@
-pipeline{
-agent any
+
 node {
     stage('Clone sources') {
         git url: 'https://github.com/Mugundhanp2497/pipe-ine.git'
@@ -31,4 +30,4 @@ node {
             echo 'For example, if the Pipeline was previously failing but is now successful'
         }
     }
-}
+
