@@ -1,4 +1,5 @@
 node {
+    agent { docker { image 'ruby' } }
     stage('Clone sources') {
         git url: 'https://github.com/Mugundhanp2497/pipe-ine.git'
     }
